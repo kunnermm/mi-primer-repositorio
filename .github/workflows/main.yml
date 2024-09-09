@@ -9,4 +9,4 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Validate secret
-      run: echo "El valor del secreto es ${{ secrets.MY_SECRET }} y el de la varible ${{ secrets.MY_VAR }}"
+      run: echo "El valor del secreto es ${{ secrets.MY_SECRET }}"
