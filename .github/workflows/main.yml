@@ -1,0 +1,12 @@
+name: Check Secret
+
+on: [push]
+
+jobs:
+  check_secret:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Validate secret
+      run: echo "El valor del secreto es ${{ secrets.MY_SECRET }}"
