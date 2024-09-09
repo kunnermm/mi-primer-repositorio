@@ -3,3 +3,6 @@ console.log("La API Key es: " + API_KEY);
 
 const TOKEN = "ghp_1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 console.log("El token es: " + TOKEN);
+
+const KEY = "1234qwert";
+console.log("La key es: " + KEY);
