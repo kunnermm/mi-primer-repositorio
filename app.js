@@ -1,6 +1,5 @@
-const API_KEY = "MI_SECRETO_SUPER_SEGURO";
+const API_KEY = "AIzaSyBz0D7m-EXAMPLEKEY1234567";
 console.log("La API Key es: " + API_KEY);
 
-const CLAVE = "ASDF1234";
-console.log("La CLAVE es: " + API_KEY);
-
+const TOKEN = "ghp_1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+console.log("El token es: " + TOKEN);
