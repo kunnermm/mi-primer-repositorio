@@ -5,17 +5,20 @@ on: [push]
 jobs:
   check_secret:
     runs-on: ubuntu-latest
+    environment: ENTORNO1 
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: Validate secret
+    - name: Validate secret and variable
       run: |
         # Validación secreto
+        echo "Valor de MY_SECRET: ${{ secrets.MY_SECRET }}"
+        echo "Valor de MY_VAR: ${{ vars.MY_VAR }}"
+        
         if [[ "${{ secrets.MY_SECRET }}" == "${{ vars.MY_VAR }}" ]]; then
           echo "El valor del secreto es válido: ${{ secrets.MY_SECRET }}"
         else
           echo "El valor del secreto es incorrecto"
         fi
-
-        echo "El valor de la variable es: ${{ vars.MY_VAR }}"
