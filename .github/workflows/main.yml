@@ -8,5 +8,13 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      
     - name: Validate secret
-      run: echo "El valor del secreto es ${{ secrets.MY_SECRET }}"
+      run: |
+        if [[ "${{ secrets.MY_SECRET }}" == "${{ vars.MY_VAR }}" ]]; then
+          echo "El valor del secreto es válido: ${{ secrets.MY_SECRET }}"
+        else
+          echo "El valor del secreto es incorrecto"
+        fi
+
+        echo "El valor de la variable es: ${{ vars.MY_VAR }}"
