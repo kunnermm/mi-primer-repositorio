@@ -11,6 +11,7 @@ jobs:
       
     - name: Validate secret
       run: |
+        # Validación secreto
         if [[ "${{ secrets.MY_SECRET }}" == "${{ vars.MY_VAR }}" ]]; then
           echo "El valor del secreto es válido: ${{ secrets.MY_SECRET }}"
         else
